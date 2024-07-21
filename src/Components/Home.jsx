@@ -7,7 +7,7 @@ import { RxDotFilled } from "react-icons/rx";
 
 const Home = () => {
   const imgslides = [
-    { url: img1, text: "Welcome" },
+    { url: img1, text: "Welcome", css: 'flex font-bold justify-center pt-[240px] text-9xl' },
     { url: img2 },
     { url: img3 },
   ];
@@ -45,7 +45,11 @@ const Home = () => {
               className={`absolute top-0 left-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
-            ></div>
+            >
+                <div className={`absolute w-full text-white ${slide.css}`}>
+                {slide.text}
+              </div>
+            </div>
           ))}
         </div>
         <div className="absolute bottom-20 left-0 right-0 flex justify-center z-10">

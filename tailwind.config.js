@@ -8,6 +8,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@designbycode/tailwindcss-text-shadow"),],
 };
 
