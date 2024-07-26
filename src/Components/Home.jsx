@@ -4,14 +4,16 @@ import img2 from "../Assets/img2.jpg";
 import img3 from "../Assets/img3.jpg";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
-
+{/*Image arry for carousel with css for buttons*/}
 const Home = () => {
   const imgslides = [
-    { url: img1, text: "Welcome", css: 'flex font-bold justify-center pt-[240px] text-9xl' },
+    { url: img1, text: "Welcome", 
+      css: 'flex font-bold justify-center text-9xl pt-[180px]'
+     },
     { url: img2 },
     { url: img3 },
   ];
-
+{/*Arrary slider for carousel*/}
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -28,6 +30,7 @@ const Home = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+  {/*Effect for transition for carusel */}
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -42,11 +45,12 @@ const Home = () => {
             <div
               key={index}
               style={{ backgroundImage: `url(${slide.url})` }}
+              
               className={`absolute top-0 left-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
-            >
-                <div className={`absolute w-full text-white ${slide.css}`}>
+            >{/*Css for the image text*/}
+                <div className={`absolute w-full text-white ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
                 {slide.text}
               </div>
             </div>
@@ -76,8 +80,21 @@ const Home = () => {
           <BsChevronCompactRight onClick={nextSlide} size={30}/>
         </div>
         <div className="w-full h-full bg-white">
-        <div className=" flex py-24 px-24"> 
-      <img src={img1} alt="Church Location" class=" rounded-full size-[320px] "/>
+        <div className=" flex py-24 justify-center flex-row "> 
+          {/*The*/}
+      <img src={img1} alt="Church Location" class="flex rounded-full size-[320px] border-4 border-gray-400 "/>
+      <div className="pt-[20px]">
+      <p className=' text-4xl font-bold inline text-[#a34848] '>Resursestion Church of Jesus Christ</p>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed 
+      </p>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed 
+      </p>
+
+      </div>
       </div>
       </div>
       </div>
