@@ -8,7 +8,7 @@ import { RxDotFilled } from "react-icons/rx";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px]'
+      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About", buttoncss:'flex justify-center text 2xl'
      },
     { url: img2 },
     { url: img3 },
@@ -50,12 +50,19 @@ const Home = () => {
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
             >{/*Css for the image text*/}
+                <div>
                 <div className={`absolute w-full text-white ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
                 {slide.text}
+                </div>
+                {/*Css for the button on image 1*/}
+                <div className={`absolute w-full text-white ${slide.buttoncss}`}>
+                  {slide.button}
+                </div>
               </div>
             </div>
           ))}
         </div>
+        {/*Css for dot controll for the carousel*/}
         <div className="absolute bottom-20 left-0 right-0 flex justify-center z-10">
           {imgslides.map((slide, slideIndex) => (
             <div
@@ -63,6 +70,7 @@ const Home = () => {
               onClick={() => goToSlide(slideIndex)}
               className="text-5xl cursor-pointer"
             >
+              {/*Element that shows what slide the carousel is on*/}
               <RxDotFilled
                 className={`${
                   slideIndex === currentIndex ? "text-white" : "text-gray-500"
@@ -79,9 +87,9 @@ const Home = () => {
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactRight onClick={nextSlide} size={30}/>
         </div>
-        <div className="w-full h-full bg-white">
+        <div className="w-full h-full bg-[#f0f0f0]">
         <div className=" flex py-24 justify-center flex-row "> 
-          {/*The*/}
+          {/*The location of the church container*/}
       <img src={img1} alt="Church Location" class="flex rounded-full size-[320px] border-4 border-gray-400 "/>
       <div className="pt-[20px]">
       <p className=' text-4xl font-bold inline text-[#a34848] '>Resursestion Church of Jesus Christ</p>
