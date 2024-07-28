@@ -8,7 +8,7 @@ import { RxDotFilled } from "react-icons/rx";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About", buttoncss:'flex justify-center text 2xl'
+      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About", buttoncss:'text-[#f0f0f0] text-2xl bg-purple-900 '
      },
     { url: img2 },
     { url: img3 },
@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 5000000);
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
@@ -51,12 +51,15 @@ const Home = () => {
               }`}
             >{/*Css for the image text*/}
                 <div>
-                <div className={`absolute w-full text-white ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
+                <div className={`absolute w-full text-[#f0f0f0] ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
                 {slide.text}
                 </div>
                 {/*Css for the button on image 1*/}
-                <div className={`absolute w-full text-white ${slide.buttoncss}`}>
+                <div className="container py-10 flex flex-col items-center justify-center ">
+                  <button className={`${slide.buttoncss}`}>
                   {slide.button}
+                  </button>
+                  
                 </div>
               </div>
             </div>
