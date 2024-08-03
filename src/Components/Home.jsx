@@ -8,7 +8,7 @@ import { RxDotFilled } from "react-icons/rx";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About", buttoncss:'text-[#f0f0f0] text-2xl bg-purple-900 '
+      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About us", buttoncss:'text-[#f0f0f0] text-2xl '
      },
     { url: img2 },
     { url: img3 },
@@ -56,7 +56,7 @@ const Home = () => {
                 </div>
                 {/*Css for the button on image 1*/}
                 <div className="container py-10 flex flex-col items-center justify-center ">
-                  <button className={`${slide.buttoncss}`}>
+                  <button className={`rounded-full font-bold py-2 px-4 mt-3 bg-[#a34848] hover:bg-blue-400 ${slide.buttoncss}`}>
                   {slide.button}
                   </button>
                   
@@ -95,7 +95,7 @@ const Home = () => {
           {/*The location of the church container*/}
       <img src={img1} alt="Church Location" class="flex rounded-full size-[320px] border-4 border-gray-400 "/>
       <div className="pt-[20px]">
-      <p className=' text-4xl font-bold inline text-[#a34848] '>Resursestion Church of Jesus Christ</p>
+      <p className=' text-4xl font-bold inline text-[#a34848] '>Resurrection Church of Jesus Christ</p>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed 
