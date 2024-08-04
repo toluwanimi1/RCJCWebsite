@@ -8,9 +8,10 @@ import { RxDotFilled } from "react-icons/rx";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px]', button:"About us", buttoncss:'text-[#f0f0f0] text-2xl '
+      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]', button:"About us", buttoncss:'text-[#f0f0f0] text-2xl hover:bg-white font-bold py-2 px-4 mt-3 border'
      },
-    { url: img2 },
+    { url: img2, text: "Up Coming events", 
+      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]' },
     { url: img3 },
   ];
 {/*Arrary slider for carousel*/}
@@ -51,12 +52,12 @@ const Home = () => {
               }`}
             >{/*Css for the image text*/}
                 <div>
-                <div className={`absolute w-full text-[#f0f0f0] ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
+                <div className={`absolute w-full ${slide.css}`} style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)" }}>
                 {slide.text}
                 </div>
                 {/*Css for the button on image 1*/}
-                <div className="container py-10 flex flex-col items-center justify-center ">
-                  <button className={`rounded-full font-bold py-2 px-4 mt-3 bg-[#a34848] hover:bg-blue-400 ${slide.buttoncss}`}>
+                <div className="container pt-[400px] py-10 flex flex-col items-center justify-center ">
+                  <button className={` ${slide.buttoncss}`}>
                   {slide.button}
                   </button>
                   
