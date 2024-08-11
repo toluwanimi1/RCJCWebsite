@@ -8,7 +8,10 @@ import { RxDotFilled } from "react-icons/rx";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]', button:"About us", buttoncss:'text-[#f0f0f0] text-2xl hover:bg-white font-bold py-2 px-4 mt-3 border'
+      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]', 
+      button:"About us", 
+      buttoncss:" z-20 flex text-[#f0f0f0] text-2xl font-bold py-2 px-4 border hover:bg-gray-300 hover:bg-opacity-25",
+    
      },
     { url: img2, text: "Up Coming events", 
       css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]' },
@@ -56,12 +59,13 @@ const Home = () => {
                 {slide.text}
                 </div>
                 {/*Css for the button on image 1*/}
-                <div className="container pt-[400px] py-10 flex flex-col items-center justify-center ">
-                  <button className={` ${slide.buttoncss}`}>
+                
+                <div className="flex justify-center items-center h-[780px] pt-8 ">
+                  <button className= {`${slide.buttoncss}`} style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}>
                   {slide.button}
                   </button>
-                  
                 </div>
+                  
               </div>
             </div>
           ))}
