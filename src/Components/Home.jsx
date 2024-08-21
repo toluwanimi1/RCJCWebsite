@@ -4,6 +4,7 @@ import img2 from "../Assets/img2.jpg";
 import img3 from "../Assets/img3.jpg";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import Map from "./Mapwidget";
 {/*Image arry for carousel with css for buttons*/}
 const Home = () => {
   const imgslides = [
@@ -109,14 +110,19 @@ const Home = () => {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed 
       </p>
-
+      <div className="w-[1022px] h-[200px]">
+          <Map/>
       </div>
       </div>
       </div>
       </div>
       
+      </div>
+      
+
     </div>
   );
 };
+
 
 export default Home;
