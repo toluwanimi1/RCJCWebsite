@@ -1,6 +1,8 @@
 import React, {useState, Component } from 'react';
 import Logo from '../Assets/logo.png';
 import {FaBars, FaTimes} from "react-icons/fa";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import About from './Aboutus.jsx'; 
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)

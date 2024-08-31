@@ -43,7 +43,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <div name="Home" className="w-full h-[780px] bg-[#a34848]">
+    <div name="Home" className="w-full h-[780px] bg-[#64092c]">
       <div className="h-[780px] w-full m-auto py-20 relative group">
         <div className="relative w-full h-full">
           {imgslides.map((slide, index) => (
