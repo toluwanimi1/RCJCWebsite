@@ -1,8 +1,7 @@
 import React, {useState, Component } from 'react';
 import Logo from '../Assets/logo.png';
 import {FaBars, FaTimes} from "react-icons/fa";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import About from './Aboutus.jsx'; 
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -13,10 +12,14 @@ return (
     {/*menu */}    
             <ul className='hidden md:flex'>
                 <li className='hover:text-[#64092c]'>
+                <Link to="/">
                 Home
+                </Link>
                 </li>
                 <li className='hover:text-[#64092c]'>
+                <Link to="/Aboutus">
                 About Us
+                </Link>
                 </li>
                 <li className='hover:text-[#64092c]'>
                 New to Church

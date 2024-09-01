@@ -4,6 +4,9 @@ import img2 from "../Assets/img2.jpg";
 import img3 from "../Assets/img3.jpg";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import Footer from "./Footer"
 import Map from "./Mapwidget";
 {/*Image arry for carousel with css for buttons*/}
 const Home = () => {
@@ -12,6 +15,7 @@ const Home = () => {
       css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]', 
       button:"About us", 
       buttoncss:" z-20 flex text-[#f0f0f0] text-2xl font-bold py-2 px-4 border hover:bg-gray-300 hover:bg-opacity-25",
+      linkto: "/Aboutus"
     
      },
     { url: img2, text: "Up Coming events", 
@@ -44,6 +48,7 @@ const Home = () => {
   }, [currentIndex]);
   return (
     <div name="Home" className="w-full h-[780px] bg-[#64092c]">
+    <Navbar/> 
       <div className="h-[780px] w-full m-auto py-20 relative group">
         <div className="relative w-full h-full">
           {imgslides.map((slide, index) => (
@@ -62,9 +67,13 @@ const Home = () => {
                 {/*Css for the button on image 1*/}
                 
                 <div className="flex justify-center items-center h-[780px] pt-8 ">
+                  
                   <button className= {`${slide.buttoncss}`} style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}>
+                  <Link to= {slide.linkto}>
                   {slide.button}
+                  </Link>
                   </button>
+                  
                 </div>
                   
               </div>
@@ -119,7 +128,7 @@ const Home = () => {
       
       </div>
       
-
+      <Footer/>
     </div>
   );
 };
