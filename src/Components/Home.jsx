@@ -12,14 +12,14 @@ import Map from "./Mapwidget";
 const Home = () => {
   const imgslides = [
     { url: img1, text: "Welcome", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]', 
+      css: 'flex font-bold justify-center text-4xl sm:text-6xl md:text-7xl lg:text-9xl pt-20 sm:pt-32 md:pt-40 lg:pt-[180px] text-[#f0f0f0]', 
       button:"About us", 
-      buttoncss:" z-20 flex text-[#f0f0f0] text-2xl font-bold py-2 px-4 border hover:bg-gray-300 hover:bg-opacity-25",
+      buttoncss:" z-20 flex text-[#f0f0f0] text-lg sm:text-xl md:text-2xl font-bold py-2 px-4 border hover:bg-gray-300 hover:bg-opacity-25",
       linkto: "/Aboutus"
     
      },
     { url: img2, text: "Up Coming events", 
-      css: 'flex font-bold justify-center text-9xl pt-[180px] text-[#f0f0f0]' },
+      css: 'flex font-bold justify-center text-4xl sm:text-6xl md:text-7xl lg:text-9xl pt-20 sm:pt-32 md:pt-40 lg:pt-[180px] text-[#f0f0f0]' },
     { url: img3 },
   ];
 {/*Arrary slider for carousel*/}
@@ -47,9 +47,9 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <div name="Home" className="w-full h-[780px] bg-[#64092c]">
+    <div name="Home" className="w-full min-h-screen bg-[#64092c]">
     <Navbar/> 
-      <div className="h-[780px] w-full m-auto py-20 relative group">
+      <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[780px] w-full m-auto py-4 sm:py-8 md:py-16 lg:py-20 relative group">
         <div className="relative w-full h-full">
           {imgslides.map((slide, index) => (
             <div
@@ -66,7 +66,7 @@ const Home = () => {
                 </div>
                 {/*Css for the button on image 1*/}
                 
-                <div className="flex justify-center items-center h-[780px] pt-8 ">
+                <div className="flex justify-center items-center h-full pt-8 ">
                   
                   <button className= {`${slide.buttoncss}`} style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}>
                   <Link to= {slide.linkto}>
@@ -81,7 +81,7 @@ const Home = () => {
           ))}
         </div>
         {/*Css for dot controll for the carousel*/}
-        <div className="absolute bottom-20 left-0 right-0 flex justify-center z-10">
+        <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 lg:bottom-20 left-0 right-0 flex justify-center z-10">
           {imgslides.map((slide, slideIndex) => (
             <div
               key={slideIndex}
@@ -98,37 +98,42 @@ const Home = () => {
           ))}
         </div>
         {/* Left Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 sm:left-5 text-xl sm:text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={30}/>
         </div>
         {/* Right Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 sm:right-5 text-xl sm:text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactRight onClick={nextSlide} size={30}/>
         </div>
-        <div className="w-full h-full bg-[#f0f0f0]">
-        <div className=" flex py-24 justify-center flex-row "> 
-          {/*The location of the church container*/}
-      <img src={img1} alt="Church Location" class="flex rounded-full size-[320px] border-4 border-gray-400 "/>
-      <div className="pt-[20px]">
-      <p className=' text-4xl font-bold inline text-[#a34848] '>Resurrection Church of Jesus Christ</p>
-      <p>
+        {/*The location of the church container*/}
+        <div className="w-full h-full bg-[#f0f0f0] py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4">
+        <div className=" flex flex-col md:flex-row items-center justify-center gap-8 "> 
+      <img src={img1} alt="Church Location" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-gray-400"/>
+      <div className="md:w-1/2 text-center md:text-left">
+      <p className='text-3xl sm:text-4xl font-bold text-[#a34848] mb-4'>Resurrection Church of Jesus Christ</p>
+      <p className="mb-8">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed 
       </p>
-      <p>
+      <p className="mb-8">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed 
       </p>
-      <div className="w-[1022px] h-[200px]">
-          <Map/>
+      <div className="h-48 sm:h-64 md:h-80">
+      
+        <Map/>
+        
+      </div>
       </div>
       </div>
       </div>
       </div>
       
       </div>
-      
+      <div>
       <Footer/>
+      </div>
     </div>
   );
 };
