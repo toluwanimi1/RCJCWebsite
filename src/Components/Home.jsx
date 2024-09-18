@@ -47,8 +47,12 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <div name="Home" className="w-full min-h-screen bg-[#64092c]">
-    <Navbar/> 
+    <div name="Hometop" className="flex flex-col">
+      <Navbar/> 
+      <div className="flex-grow ">
+    <div name="Home" className=" w-full bg-[#64092c] ">
+    
+    
       <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[780px] w-full m-auto py-4 sm:py-8 md:py-16 lg:py-20 relative group">
         <div className="relative w-full h-full">
           {imgslides.map((slide, index) => (
@@ -78,7 +82,9 @@ const Home = () => {
                   
               </div>
             </div>
+            
           ))}
+          
         </div>
         {/*Css for dot controll for the carousel*/}
         <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 lg:bottom-20 left-0 right-0 flex justify-center z-10">
@@ -105,8 +111,14 @@ const Home = () => {
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 sm:right-5 text-xl sm:text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactRight onClick={nextSlide} size={30}/>
         </div>
+        
+          
         {/*The location of the church container*/}
-        <div className="w-full h-full bg-[#f0f0f0] py-8 sm:py-12 md:py-16">
+    
+      </div>
+      
+      </div>
+      <div className=" bg-[#f0f0f0] py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-4">
         <div className=" flex flex-col md:flex-row items-center justify-center gap-8 "> 
       <img src={img1} alt="Church Location" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-gray-400"/>
@@ -125,17 +137,19 @@ const Home = () => {
         <Map/>
         
       </div>
-
+ 
       </div>
       </div>
       </div>
-      </div>
-      
       </div>
       <div>
-      <Footer/>
+        
       </div>
+      
     </div>
+    <Footer/>
+    </div>
+    
   );
 };
 

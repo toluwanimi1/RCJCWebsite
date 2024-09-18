@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#f0f0f0] text-[black] z-50'>
-        <div> <img src={Logo} alt="Logo image" style={{width: '70px'}}/></div>
+        <div> <Link to="/"> <img src={Logo} alt="Logo image" style={{width: '70px'}} /> </Link> </div>
     {/*menu */}    
             <ul className='hidden md:flex'>
                 <li className='hover:text-[#64092c]'>
@@ -25,7 +25,7 @@ return (
                 New to Church
                 </li>
                 <li className='hover:text-[#64092c]'>
-                Ministries
+                Give
                 </li>
                 <li className='hover:text-[#64092c]'>
                 Contact
@@ -50,7 +50,7 @@ return (
                 New to Church
                 </li>
                 <li className=' py-6 text-4xl hover:text-[#64092c]'>
-                Ministries
+                Give
                 </li>
                 <li className=' py-6 text-4xl hover:text-[#64092c]'>
                 Contact
