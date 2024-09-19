@@ -22,13 +22,19 @@ return (
                 </Link>
                 </li>
                 <li className='hover:text-[#64092c]'>
+                <Link to="/Newtochurch">
                 New to Church
+                </Link>
                 </li>
                 <li className='hover:text-[#64092c]'>
+                <Link to="/Give">
                 Give
+                </Link>
                 </li>
                 <li className='hover:text-[#64092c]'>
+                <Link to="/Contact">
                 Contact
+                </Link>
                 </li>
             </ul>
 
@@ -47,13 +53,19 @@ return (
                 </Link>
                 </li>
                 <li className=' py-6 text-4xl hover:text-[#64092c]'>
+                <Link to="/Newtochurch">
                 New to Church
+                </Link>
                 </li>
                 <li className=' py-6 text-4xl hover:text-[#64092c]'>
+                <Link to="/Give">
                 Give
+                </Link>
                 </li>
                 <li className=' py-6 text-4xl hover:text-[#64092c]'>
+                <Link to="/Contact">
                 Contact
+                </Link>
                 </li>
             </ul>  
             

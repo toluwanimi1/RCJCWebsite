@@ -47,7 +47,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
   return (
-    <div name="Hometop" className="flex flex-col">
+    <div name="Hometop" className="flex flex-col"  >
       <Navbar/> 
       <div className="flex-grow ">
     <div name="Home" className=" w-full bg-[#64092c] ">

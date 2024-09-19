@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Give = () => {
+const Contact = () => {
   return (
     <div name="Hometop" className="flex flex-col">
       <Navbar/>
@@ -18,5 +18,4 @@ const Give = () => {
   )
 }
 
-export default Give
- 
+export default Contact
