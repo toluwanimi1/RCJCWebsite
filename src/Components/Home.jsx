@@ -7,7 +7,9 @@ import { RxDotFilled } from "react-icons/rx";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import Footer from "./Footer"
+import Weekly from "./WeeklyEventWidget"
 import Map from "./Mapwidget";
+import Transtion from "../Transition";
 {/*Image arry for carousel with css for buttons*/}
 const Home = () => {
   const imgslides = [
@@ -53,7 +55,7 @@ const Home = () => {
     <div name="Home" className=" w-full bg-[#64092c] ">
     
     
-      <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[780px] w-full m-auto py-4 sm:py-8 md:py-16 lg:py-20 relative group">
+      <div className="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[780px] w-full relative group ">
         <div className="relative w-full h-full">
           {imgslides.map((slide, index) => (
             <div
@@ -70,7 +72,7 @@ const Home = () => {
                 </div>
                 {/*Css for the button on image 1*/}
                 
-                <div className="flex justify-center items-center h-[700px] ">
+                <div className="flex justify-center items-center h-[780px] ">
                   
                   <button className= {`${slide.buttoncss}`} style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}>
                   <Link to= {slide.linkto}>
@@ -116,9 +118,13 @@ const Home = () => {
         {/*The location of the church container*/}
     
       </div>
-      
+      <div name="banner" className="bg-[#331E26] w-full text-center py-2 sm:py-4 md:py-6">
+  <h2 className="text-xl sm:text-2xl md:text-3xl text-white">
+    Join Us For Our Sunday Service - Every Sunday at 10:00 AM
+  </h2>
+</div>
       </div>
-      <div className=" bg-[#f0f0f0] py-8 sm:py-12 md:py-16">
+      <div className=" bg-[#f0f0f0] py-4 sm:py-6 md:py-8">
         <div className="container mx-auto px-4">
         <div className=" flex flex-col md:flex-row items-center justify-center gap-8 "> 
       <img src={img1} alt="Church Location" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 border-4 border-gray-400"/>
@@ -142,10 +148,9 @@ const Home = () => {
       </div>
       </div>
       </div>
-      <div>
-        
-      </div>
-      
+      <div className=" bg-[#f0f0f0] py-4 sm:py-6 md:py-8">
+     <Weekly/>
+     </div>
     </div>
     <Footer/>
     </div>
@@ -154,4 +159,4 @@ const Home = () => {
 };
 
 
-export default Home;
+export default Transtion(Home);

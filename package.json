@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "churchsite": "file:",
+    "framer-motion": "^11.9.0",
     "leaflet": "^1.9.4",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
@@ -41,6 +42,6 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.13"
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,10 +10,11 @@ const Footer = () => {
           <p className="text-sm">A brief description.</p>
         </div>
         <div className="mb-4">
-          <a href="#" className="text-sm mx-2 hover:text-gray-300">Home</a>
-          <a href="#" className="text-sm mx-2 hover:text-gray-300">About</a>
-          <a href="#" className="text-sm mx-2 hover:text-gray-300">Services</a>
-          <a href="#" className="text-sm mx-2 hover:text-gray-300">Contact</a>
+          <Link to="/" className="text-sm mx-2 hover:text-gray-300">Home</Link>
+          <Link href="#" className="text-sm mx-2 hover:text-gray-300">About Us</Link>
+          <a href="https://www.youtube.com/@resurrectionchurchOJC" target="_blank" className="text-sm mx-2 hover:text-gray-300">Sermons</a>
+          <Link href="#" className="text-sm mx-2 hover:text-gray-300">Give</Link>
+          <Link href="#" className="text-sm mx-2 hover:text-gray-300">Contact</Link>
         </div>
         <div className="text-sm">
           © {new Date().getFullYear()} Resurrection church of Jesus Christ. All rights reserved.
