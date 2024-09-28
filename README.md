@@ -4,8 +4,7 @@
 - [Features](#features)
 - [Planned Features](#Planned-Features)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 - ## Features
 - Image Carrousel 
