@@ -22,3 +22,11 @@
 - Tailwind CSS
 - Leaflet
 - Framer motion
+
+
+
+
+
+## Acknowledgments
+- [React Documentation](https://reactjs.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/)
