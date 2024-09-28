@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RCJCWebsite/static/css/main.5a972dab.css",
-    "main.js": "/RCJCWebsite/static/js/main.8806d7ee.js",
+    "main.js": "/RCJCWebsite/static/js/main.2fa4e395.js",
     "static/js/453.35dd3ddb.chunk.js": "/RCJCWebsite/static/js/453.35dd3ddb.chunk.js",
     "static/media/img3.jpg": "/RCJCWebsite/static/media/img3.90a83b4d42de42714374.jpg",
     "static/media/img2.jpg": "/RCJCWebsite/static/media/img2.d7b99b4de32671172ea6.jpg",
@@ -10,11 +10,11 @@
     "static/media/placeholder.png": "/RCJCWebsite/static/media/placeholder.64cdcb0ef97818161310.png",
     "index.html": "/RCJCWebsite/index.html",
     "main.5a972dab.css.map": "/RCJCWebsite/static/css/main.5a972dab.css.map",
-    "main.8806d7ee.js.map": "/RCJCWebsite/static/js/main.8806d7ee.js.map",
+    "main.2fa4e395.js.map": "/RCJCWebsite/static/js/main.2fa4e395.js.map",
     "453.35dd3ddb.chunk.js.map": "/RCJCWebsite/static/js/453.35dd3ddb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a972dab.css",
-    "static/js/main.8806d7ee.js"
+    "static/js/main.2fa4e395.js"
   ]
 }
