@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename="https://toluwanimi1.github.io/RCJCWebsite/" >
+    <Router basename="/RCJCWebsite" >
       <Routes >
         <Route path="/*" element={<App />}/>
       </Routes>
